@@ -1,14 +1,14 @@
 === Scroll Top ===
 Contributors: satrya, themephe
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D7VPMAPHA98LW
-Tags: 
+Tags: scroll top, back to top, button, to top, jquery, scroll to top
 Requires at least: 3.6
 Tested up to: 3.8.1
 Stable tag: 0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Automaticlly adds a flexible Scroll to Top button to your WordPress website. You can choose color you like, choose Icon Font or just a plain text and much more.
+Automaticlly adds a flexible Scroll to Top button to your WordPress website. You can choose color you like, Icon Font or plain text and much more.
 
 == Description ==
 
@@ -25,6 +25,12 @@ This plugin will enable a custom and flexible Scroll/Back To Top to your WordPre
 * Change animation you like.
 * Automatically hide on screen width smaller than 600 pixels.
 
+= Support =
+
+* Go to [forum support](http://wordpress.org/support/plugin/scroll-top).
+* [Open issue on github](https://github.com/satrya/scroll-top).
+* [Rate/Review the plugin](http://wordpress.org/support/view/plugin-reviews/scroll-top).
+
 = Plugin Info =
 * Developed by [Satrya](http://themephe.com) - [@themephe](http://twitter.com/themephe)
 
@@ -34,6 +40,7 @@ If you want to buy me a cup of coffee, you can do by visiting [this page](https:
 == Installation ==
 
 **Through Dashboard**
+
 1. Log in to your WordPress admin panel and go to Plugins -> Add New
 2. Type **scroll top** in the search box and click on search button.
 3. Find Scroll Top plugin.
@@ -41,9 +48,10 @@ If you want to buy me a cup of coffee, you can do by visiting [this page](https:
 5. Go to Settings -> Scroll Top.
 
 **Installing Via FTP**
+
 1. Download the plugin to your hardisk.
 2. Unzip.
-3. Upload "scroll-top" folder into your plugins directory.
+3. Upload the "scroll-top" folder into your plugins directory.
 4. Log in to your WordPress admin panel and click the Plugins menu.
 5. Then activate the plugin.
 6. Go to Settings -> Scroll Top.
