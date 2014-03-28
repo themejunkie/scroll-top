@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Scroll Top WordPress Plugin\n"
-"POT-Creation-Date: 2014-02-21 18:53+0700\n"
-"PO-Revision-Date: 2014-02-21 18:53+0700\n"
+"POT-Creation-Date: 2014-03-28 14:19+0700\n"
+"PO-Revision-Date: 2014-03-28 14:19+0700\n"
 "Last-Translator: Satrya <satrya@satrya.me>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../admin/admin.php:28 ../admin/admin.php:342
+#: ../admin/admin.php:28 ../admin/admin.php:365
 msgid "Scroll Top Settings"
 msgstr ""
 
@@ -32,7 +32,7 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: ../admin/admin.php:97 ../admin/admin.php:186
+#: ../admin/admin.php:97 ../admin/admin.php:195
 msgid "Text"
 msgstr ""
 
@@ -60,73 +60,85 @@ msgstr ""
 msgid "Scroll to top speed"
 msgstr ""
 
-#: ../admin/admin.php:169
+#: ../admin/admin.php:160
+msgid "Scroll to top distance"
+msgstr ""
+
+#: ../admin/admin.php:178
 msgid "Enable scroll top on your site?"
 msgstr ""
 
-#: ../admin/admin.php:191
+#: ../admin/admin.php:200
 msgid "Icon Font"
 msgstr ""
 
-#: ../admin/admin.php:194
+#: ../admin/admin.php:203
 msgid "Select the type of the scroll to top."
 msgstr ""
 
-#: ../admin/admin.php:210
+#: ../admin/admin.php:219
 msgid "If you choose the Text type, then please type the text here."
 msgstr ""
 
-#: ../admin/admin.php:226
+#: ../admin/admin.php:235
 msgid "Left Side"
 msgstr ""
 
-#: ../admin/admin.php:231
+#: ../admin/admin.php:240
 msgid "Right Side"
 msgstr ""
 
-#: ../admin/admin.php:234
+#: ../admin/admin.php:243
 msgid "Select the position of the scroll to top button/text."
 msgstr ""
 
-#: ../admin/admin.php:250
+#: ../admin/admin.php:259
 msgid "Select the color for the scroll top button."
 msgstr ""
 
-#: ../admin/admin.php:265
+#: ../admin/admin.php:274
 msgid "Select the background color for the scroll top button."
 msgstr ""
 
-#: ../admin/admin.php:280
+#: ../admin/admin.php:289
 msgid "Square"
 msgstr ""
 
-#: ../admin/admin.php:285
+#: ../admin/admin.php:294
 msgid "Rounded"
 msgstr ""
 
-#: ../admin/admin.php:288
+#: ../admin/admin.php:297
 msgid "The border radius type."
 msgstr ""
 
-#: ../admin/admin.php:303
+#: ../admin/admin.php:312
 msgid "Fade"
 msgstr ""
 
-#: ../admin/admin.php:308
+#: ../admin/admin.php:317
 msgid "Slide"
 msgstr ""
 
-#: ../admin/admin.php:313
+#: ../admin/admin.php:322
 msgid "None"
 msgstr ""
 
-#: ../admin/admin.php:328
+#: ../admin/admin.php:337
 msgid " millisecond"
 msgstr ""
 
-#: ../admin/admin.php:343
+#: ../admin/admin.php:351
+msgid " px"
+msgstr ""
+
+#: ../admin/admin.php:366
+msgid "Welcome to the Scroll Top plugin settings."
+msgstr ""
+
+#: ../admin/admin.php:367
 #, php-format
-msgid "Welcome to the Scroll Top plugin settings. This is a project by %s."
+msgid "Check out our other %1$sfree plugins and themes%2$s."
 msgstr ""
 
 #: ../inc/functions.php:29

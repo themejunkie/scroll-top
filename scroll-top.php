@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name:  Scroll Top
- * Plugin URI:   https://github.com/satrya/scroll-top
+ * Plugin URI:   http://satrya.me/wordpress-plugins/scroll-top/
  * Description:  Adds a flexible Scroll to Top button to any post/page of your WordPress website.
- * Version:      0.1
+ * Version:      0.2
  * Author:       Satrya
- * Author URI:   http://themephe.com/
- * Author Email: satrya@themephe.com
+ * Author URI:   http://satrya.me/
+ * Author Email: satrya@satrya.me
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU 
  * General Public License as published by the Free Software Foundation; either version 2 of the License, 
@@ -19,7 +19,7 @@
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @author    Satrya
- * @copyright Copyright (c) 2013, Satrya & ThemePhe
+ * @copyright Copyright (c) 2014, Satrya & ThemePhe
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 

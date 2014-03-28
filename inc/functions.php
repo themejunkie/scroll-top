@@ -3,7 +3,7 @@
  * Sets up custom filters for the plugin's output.
  *
  * @author    Satrya
- * @copyright Copyright (c) 2013, Satrya & ThemePhe
+ * @copyright Copyright (c) 2014, Satrya & ThemePhe
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -33,6 +33,7 @@ function scroll_top_get_default_settings() {
 		'scroll_top_radius'    => 'rounded',
 		'scroll_top_animation' => 'fade',
 		'scroll_top_speed'     => 300,
+		'scroll_top_distance'  => 300,
 	);
 
 	/* Allow dev to filter the default settings. */
@@ -75,6 +76,7 @@ function scroll_top_load_scripts() {
 function scroll_top_scrollup_init() {
 	$enable  = scroll_top_get_plugin_settings( 'scroll_top_enable' );
 	$speed   = absint( scroll_top_get_plugin_settings( 'scroll_top_speed' ) );
+	$dist    = absint( scroll_top_get_plugin_settings( 'scroll_top_distance' ) );
 	$animate = scroll_top_get_plugin_settings( 'scroll_top_animation' );
 	$type    = scroll_top_get_plugin_settings( 'scroll_top_type' );
 	$text    = strip_tags( scroll_top_get_plugin_settings( 'scroll_top_text' ) );
@@ -95,7 +97,8 @@ function scroll_top_scrollup_init() {
 			$.scrollUp({
 				scrollSpeed: ' . $speed . ',
 				animation: \'' . $animate . '\',
-				scrollText: \'' . $scrolltype . '\'
+				scrollText: \'' . $scrolltype . '\',
+				scrollDistance: ' . $dist . '
 			});
 		});
 		</script>' . "\n";

@@ -3,7 +3,7 @@
  * Settings functions for the plugin.
  *
  * @author    Satrya
- * @copyright Copyright (c) 2013, Satrya & ThemePhe
+ * @copyright Copyright (c) 2014, Satrya & ThemePhe
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -127,7 +127,7 @@ function scroll_top_setting_sections_fields() {
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'radius' select setting field. */
+	/* Add 'radius' radio setting field. */
 	add_settings_field(
 		'scroll_top_radius',
 		__( 'Radius', 'scrolltop' ),
@@ -136,7 +136,7 @@ function scroll_top_setting_sections_fields() {
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'animation' select setting field. */
+	/* Add 'animation' radio setting field. */
 	add_settings_field(
 		'scroll_top_animation',
 		__( 'Scroll to top animation', 'scrolltop' ),
@@ -145,11 +145,20 @@ function scroll_top_setting_sections_fields() {
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'speed' select setting field. */
+	/* Add 'speed' input setting field. */
 	add_settings_field(
 		'scroll_top_speed',
 		__( 'Scroll to top speed', 'scrolltop' ),
 		'scroll_top_speed_field',
+		'scroll_top_settings_page',
+		'scroll_top_general_settings'
+	);
+
+	/* Add 'Distance' input setting field. */
+	add_settings_field(
+		'scroll_top_distance',
+		__( 'Scroll to top distance', 'scrolltop' ),
+		'scroll_top_distance_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
 	);
@@ -331,6 +340,20 @@ function scroll_top_speed_field() {
 }
 
 /**
+ * Distance field fallback.
+ *
+ * @since 0.1
+ */
+function scroll_top_distance_field() {
+	$settings = scroll_top_get_plugin_settings( 'scroll_top_distance' );
+
+	$output = '<input name="scroll_top_plugin_settings[scroll_top_distance]" type="number" step="100" min="100" id="scroll_top_distance" value="' . $settings . '" class="small-text" />';
+	$output .= __( ' px', 'scrolltop' );
+
+	echo $output;
+}
+
+/**
  * Render the plugin settings page.
  *
  * @since 0.1
@@ -340,7 +363,8 @@ function scroll_top_plugin_settings_render_page() { ?>
 	<div class="wrap">
 			
 		<h2><?php _e( 'Scroll Top Settings', 'scrolltop' ); ?></h2>
-		<p><?php printf( __( 'Welcome to the Scroll Top plugin settings. This is a project by %s.', 'scrolltop' ), '<a href="http://themephe.com/" target="_blank">Satrya</a>' ); ?></p>
+		<p><?php _e( 'Welcome to the Scroll Top plugin settings.', 'scrolltop' ); ?></p>
+		<p><?php printf( __( 'Check out our other %1$sfree plugins and themes%2$s.', 'scrolltop' ), '<a href="http://satrya.me/" target="_blank">', '</a>' ); ?></p>
 		
 		<form method="post" action="options.php">
 			<?php settings_fields( 'scroll_top_settings' ); ?>
@@ -384,6 +408,7 @@ function scroll_top_plugin_settings_validate( $settings ) {
 	$settings['scroll_top_color']    = sanitize_text_field( $settings['scroll_top_color'] );
 	$settings['scroll_top_bg_color'] = sanitize_text_field( $settings['scroll_top_bg_color'] );
 	$settings['scroll_top_speed']    = absint( $settings['scroll_top_speed'] );
+	$settings['scroll_top_distance'] = absint( $settings['scroll_top_distance'] );
 
 	return $settings;
 }

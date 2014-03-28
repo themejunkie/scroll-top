@@ -1,10 +1,10 @@
 === Scroll Top ===
 Contributors: satrya, themephe
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D7VPMAPHA98LW
+Donate link: http://satrya.me/donate/
 Tags: scroll top, back to top, button, to top, jquery, scroll to top
 Requires at least: 3.6
 Tested up to: 3.8.1
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Automaticlly adds a flexible Scroll to Top button to your WordPress website. You
 
 == Description ==
 
-This plugin will enable a custom and flexible Scroll/Back To Top to your WordPress website. It comes with unlimited color choices, icon font option to support retina device, hide on screen width smaller than 600 pixels.
+This plugin will enable a custom and flexible Scroll/Back To Top to your WordPress website. It comes with unlimited color choices, icon font option to support retina device, hide on screen width smaller than 600 pixels. [Scroll Top Plugin](http://satrya.me/wordpress-plugins/scroll-top/) page info.
 
 = Features Include: =
 
@@ -25,17 +25,14 @@ This plugin will enable a custom and flexible Scroll/Back To Top to your WordPre
 * Change animation you like.
 * Automatically hide on screen width smaller than 600 pixels.
 
-= Support =
-
-* Go to [forum support](http://wordpress.org/support/plugin/scroll-top).
-* [Open issue on github](https://github.com/satrya/scroll-top).
-* [Rate/Review the plugin](http://wordpress.org/support/view/plugin-reviews/scroll-top).
-
 = Plugin Info =
-* Developed by [Satrya](http://themephe.com) - [@themephe](http://twitter.com/themephe)
+* Developed by [Satrya](http://satrya.me/) - [@msattt](http://twitter.com/msattt/)
+* [Github](https://github.com/satrya/scroll-top).
 
 = Donations =
-If you want to buy me a cup of coffee, you can do by visiting [this page](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D7VPMAPHA98LW). I appreciate all donations, no matter the size. 
+I spent most of my free time maintaining and supporting my free themes and plugins. I will really appericiate if you could spare a couple of bucks to help me to pay my web hosting bill. [Donate here](http://satrya.me/donate/)
+
+**[Rate/Review the plugin](http://wordpress.org/support/view/plugin-reviews/scroll-top) if you find this plugin useful.**
 
 == Installation ==
 
@@ -63,5 +60,6 @@ If you want to buy me a cup of coffee, you can do by visiting [this page](https:
 
 == Changelog ==
 
-= 0.1 - 2/21/2014 =
-* Initial release
+= 0.2 - 3/28/2014 =
+* Update jQuery plugin
+* Add scroll top distance control

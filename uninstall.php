@@ -3,7 +3,7 @@
  * Uninstall procedure for the plugin.
  *
  * @author    Satrya
- * @copyright Copyright (c) 2013, Satrya & ThemePhe
+ * @copyright Copyright (c) 2014, Satrya & ThemePhe
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
