@@ -3,8 +3,8 @@ Contributors: satrya, themephe
 Donate link: http://satrya.me/donate/
 Tags: scroll top, back to top, button, to top, jquery, scroll to top
 Requires at least: 3.6
-Tested up to: 3.8.1
-Stable tag: 0.2
+Tested up to: 3.9
+Stable tag: 0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ This plugin will enable a custom and flexible Scroll/Back To Top to your WordPre
 
 = Features Include: =
 
-* WordPress 3.8.1 Support.
+* WordPress 3.9 Support.
 * Unlimited colors.
 * Retina support(icon font).
 * Choose text or icon font.
@@ -25,12 +25,16 @@ This plugin will enable a custom and flexible Scroll/Back To Top to your WordPre
 * Change animation you like.
 * Automatically hide on screen width smaller than 600 pixels.
 
+= To Do =
+* Add custom CSS box to give you more control to the scroll top style
+* Add more icon fonts
+
 = Plugin Info =
-* Developed by [Satrya](http://satrya.me/) - [@msattt](http://twitter.com/msattt/)
-* [Github](https://github.com/satrya/scroll-top).
+* Developed by [Satrya](http://satrya.me/)
+* Check out the [Github](https://github.com/satrya/scroll-top) repo to contribute.
 
 = Donations =
-I spent most of my free time maintaining and supporting my free themes and plugins. I will really appericiate if you could spare a couple of bucks to help me to pay my web hosting bill. [Donate here](http://satrya.me/donate/)
+I spent most of my free time maintaining and supporting my free themes and plugins. I will really appreciate if you could spare a couple of bucks to help me to pay my web hosting bill. [Donate here](http://satrya.me/donate/)
 
 **[Rate/Review the plugin](http://wordpress.org/support/view/plugin-reviews/scroll-top) if you find this plugin useful.**
 
@@ -60,6 +64,11 @@ I spent most of my free time maintaining and supporting my free themes and plugi
 
 == Changelog ==
 
-= 0.2 - 3/28/2014 =
-* Update jQuery plugin
-* Add scroll top distance control
+= 0.4 - Coming Soon =
+* Add custom CSS box to give you more control to the scroll top style
+* Add more icon fonts
+
+= 0.3 - 4/22/2014 =
+* Update Language
+* Add Russian translation
+* Update the jQuery plugin

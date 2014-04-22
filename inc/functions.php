@@ -2,9 +2,11 @@
 /**
  * Sets up custom filters for the plugin's output.
  *
- * @author    Satrya
- * @copyright Copyright (c) 2014, Satrya & ThemePhe
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @package    Scroll_Top
+ * @since      0.1.0
+ * @author     Satrya
+ * @copyright  Copyright (c) 2014, Satrya
+ * @license    http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 /* Load the scripts for the plugin. */
@@ -19,7 +21,9 @@ add_action( 'wp_head', 'scroll_top_custom_css' );
 /**
  * Return the default plugin settings.
  *
- * @since 0.1
+ * @since  0.1
+ * @access public
+ * @return array
  */
 function scroll_top_get_default_settings() {
 
@@ -44,26 +48,34 @@ function scroll_top_get_default_settings() {
  * Function for quickly grabbing settings for the plugin without having to call get_option() 
  * every time we need a setting.
  *
- * @since 0.1
+ * @since  0.1
+ * @access public
+ * @return array
  */
 function scroll_top_get_plugin_settings( $option = '' ) {
-
 	$settings = get_option( 'scroll_top_plugin_settings', scroll_top_get_default_settings() );
-
 	return $settings[$option];
 }
 
 /**
  * Loads the scripts for the plugin.
  *
- * @since 0.1
+ * @since  0.1
+ * @access public
  */
 function scroll_top_load_scripts() {
+
+	/* Get the enable option. */
 	$enable  = scroll_top_get_plugin_settings( 'scroll_top_enable' );
 
+	/* Check if scroll top enable. */
 	if( $enable == '1' ) {
-		wp_enqueue_style( 'scroll-top-css', ST_ASSETS . 'css/scroll-top.css', null, null );
-		wp_enqueue_script( 'scroll-top-js', ST_ASSETS . 'js/jquery.scrollUp.min.js', array( 'jquery' ), null, true );
+
+		/* Load the plugin front-end style. */
+		wp_enqueue_style( 'scroll-top-css', trailingslashit( ST_ASSETS ) . 'css/scroll-top.css', null, null );
+
+		/* Load the jQuery plugin. */
+		wp_enqueue_script( 'scroll-top-js', trailingslashit( ST_ASSETS ) . 'js/jquery.scrollUp.min.js', array( 'jquery' ), null, true );
 	}
 
 }
@@ -72,6 +84,7 @@ function scroll_top_load_scripts() {
  * Initialize the scrollup jquery plugin.
  *
  * @since 0.1
+ * @access public
  */
 function scroll_top_scrollup_init() {
 	$enable  = scroll_top_get_plugin_settings( 'scroll_top_enable' );
@@ -110,7 +123,8 @@ function scroll_top_scrollup_init() {
 /**
  * Custom inline css for plugin usage.
  *
- * @since 0.1
+ * @since  0.1
+ * @access public
  */
 function scroll_top_custom_css() {
 	$enable   = scroll_top_get_plugin_settings( 'scroll_top_enable' );
@@ -156,4 +170,3 @@ function scroll_top_custom_css() {
 	}
 
 }
-?>

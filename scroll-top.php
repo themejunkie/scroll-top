@@ -3,7 +3,7 @@
  * Plugin Name:  Scroll Top
  * Plugin URI:   http://satrya.me/wordpress-plugins/scroll-top/
  * Description:  Adds a flexible Scroll to Top button to any post/page of your WordPress website.
- * Version:      0.2
+ * Version:      0.3
  * Author:       Satrya
  * Author URI:   http://satrya.me/
  * Author Email: satrya@satrya.me
@@ -18,22 +18,24 @@
  * You should have received a copy of the GNU General Public License along with this program; if not, write 
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
- * @author    Satrya
- * @copyright Copyright (c) 2014, Satrya & ThemePhe
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @package    Scroll_Top
+ * @since      0.1.0
+ * @author     Satrya
+ * @copyright  Copyright (c) 2014, Satrya
+ * @license    http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit;
-
-if ( ! class_exists( 'Scroll_Top' ) ) :
 
 class Scroll_Top {
 
 	/**
 	 * PHP5 constructor method.
 	 *
-	 * @since 0.1
+	 * @since  0.1
+	 * @access public
+	 * @return void
 	 */
 	public function __construct() {
 
@@ -54,7 +56,9 @@ class Scroll_Top {
 	/**
 	 * Defines constants used by the plugin.
 	 *
-	 * @since 0.1
+	 * @since  0.1
+	 * @access public
+	 * @return void
 	 */
 	public function constants() {
 
@@ -78,7 +82,9 @@ class Scroll_Top {
 	/**
 	 * Loads the translation files.
 	 *
-	 * @since 0.1
+	 * @since  0.1
+	 * @access public
+	 * @return void
 	 */
 	public function i18n() {
 		load_plugin_textdomain( 'scrolltop', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
@@ -87,7 +93,9 @@ class Scroll_Top {
 	/**
 	 * Loads the initial files needed by the plugin.
 	 *
-	 * @since 0.1
+	 * @since  0.1
+	 * @access public
+	 * @return void
 	 */
 	public function includes() {
 		require_once( ST_INCLUDES . 'functions.php' );
@@ -97,6 +105,8 @@ class Scroll_Top {
 	 * Loads the admin functions and files.
 	 *
 	 * @since  0.1
+	 * @access public
+	 * @return void
 	 */
 	public function admin() {
 		if ( is_admin() )
@@ -106,5 +116,3 @@ class Scroll_Top {
 }
 
 new Scroll_Top;
-endif;
-?>
