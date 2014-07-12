@@ -3,7 +3,7 @@
  * Plugin Name:  Scroll Top
  * Plugin URI:   http://satrya.me/wordpress-plugins/scroll-top/
  * Description:  Adds a flexible Scroll to Top button to any post/page of your WordPress website.
- * Version:      0.3
+ * Version:      0.4
  * Author:       Satrya
  * Author URI:   http://satrya.me/
  * Author Email: satrya@satrya.me
@@ -34,8 +34,6 @@ class Scroll_Top {
 	 * PHP5 constructor method.
 	 *
 	 * @since  0.1
-	 * @access public
-	 * @return void
 	 */
 	public function __construct() {
 
@@ -57,8 +55,6 @@ class Scroll_Top {
 	 * Defines constants used by the plugin.
 	 *
 	 * @since  0.1
-	 * @access public
-	 * @return void
 	 */
 	public function constants() {
 
@@ -83,8 +79,6 @@ class Scroll_Top {
 	 * Loads the translation files.
 	 *
 	 * @since  0.1
-	 * @access public
-	 * @return void
 	 */
 	public function i18n() {
 		load_plugin_textdomain( 'scrolltop', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
@@ -94,8 +88,6 @@ class Scroll_Top {
 	 * Loads the initial files needed by the plugin.
 	 *
 	 * @since  0.1
-	 * @access public
-	 * @return void
 	 */
 	public function includes() {
 		require_once( ST_INCLUDES . 'functions.php' );
@@ -105,12 +97,11 @@ class Scroll_Top {
 	 * Loads the admin functions and files.
 	 *
 	 * @since  0.1
-	 * @access public
-	 * @return void
 	 */
 	public function admin() {
-		if ( is_admin() )
+		if ( is_admin() ) {
 			require_once( ST_ADMIN . 'admin.php' );
+		}
 	}
 
 }

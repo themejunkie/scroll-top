@@ -22,7 +22,6 @@ add_action( 'admin_init', 'scroll_top_setting_sections_fields' );
  * Sets up the plugin settings page and registers the plugin settings.
  *
  * @since  0.1
- * @access public
  * @link   http://codex.wordpress.org/Function_Reference/add_options_page
  */
 function scroll_top_admin_menu() {
@@ -47,7 +46,6 @@ function scroll_top_admin_menu() {
  * Registers the Scroll Top settings.
  *
  * @since  0.1
- * @access public
  * @link   http://codex.wordpress.org/Function_Reference/register_setting
  */
 function scroll_top_register_settings() {
@@ -64,7 +62,6 @@ function scroll_top_register_settings() {
  * Register the setting sections and fields.
  *
  * @since  0.1
- * @access public
  * @link   http://codex.wordpress.org/Function_Reference/add_settings_section
  * @link   http://codex.wordpress.org/Function_Reference/add_settings_field
  */
@@ -168,13 +165,21 @@ function scroll_top_setting_sections_fields() {
 		'scroll_top_general_settings'
 	);
 
+	// Add 'Custom CSS' textarea setting field.
+	add_settings_field(
+		'scroll_top_css',
+		__( 'Custom CSS', 'scrolltop' ),
+		'scroll_top_css_field',
+		'scroll_top_settings_page',
+		'scroll_top_general_settings'
+	);
+
 }
 
 /**
  * Enable/disable field fallback.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_enable_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_enable' );
@@ -192,7 +197,6 @@ function scroll_top_enable_field() {
  * Type field fallback.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_type_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_type' );
@@ -217,7 +221,6 @@ function scroll_top_type_field() {
  * Text field fallback.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_text_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_text' );
@@ -234,7 +237,6 @@ function scroll_top_text_field() {
  * Position field fallback.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_position_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_position' );
@@ -259,7 +261,6 @@ function scroll_top_position_field() {
  * Color field fallback.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_color_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_color' );
@@ -275,7 +276,6 @@ function scroll_top_color_field() {
  * Background Color field fallback.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_bg_color_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_bg_color' );
@@ -291,7 +291,6 @@ function scroll_top_bg_color_field() {
  * Radius field fallback.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_radius_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_radius' );
@@ -315,7 +314,6 @@ function scroll_top_radius_field() {
  * Animation field fallback.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_animation_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_animation' );
@@ -342,7 +340,6 @@ function scroll_top_animation_field() {
  * Speed field fallback.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_speed_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_speed' );
@@ -357,7 +354,6 @@ function scroll_top_speed_field() {
  * Distance field fallback.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_distance_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_distance' );
@@ -369,10 +365,22 @@ function scroll_top_distance_field() {
 }
 
 /**
+ * Custom CSS fallback.
+ *
+ * @since  0.1
+ */
+function scroll_top_css_field() {
+	$settings = scroll_top_get_plugin_settings( 'scroll_top_css' );
+
+	$output = '<textarea name="scroll_top_plugin_settings[scroll_top_css]" id="scroll_top_css" cols="50" rows="12">' . $settings . '</textarea>';
+
+	echo $output;
+}
+
+/**
  * Render the plugin settings page.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_plugin_settings_render_page() { ?>
 	
@@ -397,7 +405,7 @@ function scroll_top_plugin_settings_render_page() { ?>
 						<h3 class="hndle"><span><?php _e( 'Plugin Info', 'scrolltop' ); ?></span></h3>
 						<div class="inside">
 							<ul class="ul-square">
-								<li><a href="http://satrya.me/" target="_blank"><?php _e( 'Author\'s Site', 'scrolltop' ); ?></a></li>
+								<li><a href="http://satrya.me/" target="_blank"><?php _e( 'Author Website', 'scrolltop' ); ?></a></li>
 								<li><a href="http://wordpress.org/support/plugin/scroll-top" target="_blank"><?php _e( 'Support', 'scrolltop' ); ?></a></li>
 								<li><a href="http://wordpress.org/support/view/plugin-reviews/scroll-top" target="_blank"><?php _e( 'Rate plugin', 'scrolltop' ); ?></a></li>
 							</ul>
@@ -431,7 +439,6 @@ function scroll_top_plugin_settings_render_page() { ?>
  * Validates/sanitizes the plugins settings after they've been submitted.
  *
  * @since  0.1
- * @access public
  * @return array
  */
 function scroll_top_plugin_settings_validate( $settings ) {
@@ -461,6 +468,7 @@ function scroll_top_plugin_settings_validate( $settings ) {
 	$settings['scroll_top_bg_color'] = sanitize_text_field( $settings['scroll_top_bg_color'] );
 	$settings['scroll_top_speed']    = absint( $settings['scroll_top_speed'] );
 	$settings['scroll_top_distance'] = absint( $settings['scroll_top_distance'] );
+	$settings['scroll_top_css ']     = wp_filter_nohtml_kses( $settings['scroll_top_css '] );
 
 	return $settings;
 }
@@ -469,7 +477,6 @@ function scroll_top_plugin_settings_validate( $settings ) {
  * Enqueue custom styles & scripts for plugin usage.
  *
  * @since  0.1
- * @access public
  */
 function scroll_top_styles_scripts() {
 
@@ -479,4 +486,3 @@ function scroll_top_styles_scripts() {
 	/* Load plugin admin script. */
 	wp_enqueue_script( 'scroll-top-scripts', trailingslashit( ST_ASSETS ) . 'js/scroll-top-admin.js', array( 'jquery', 'wp-color-picker' ), null, true );
 }
-?>

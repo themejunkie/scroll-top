@@ -4,7 +4,7 @@ Donate link: http://satrya.me/donate/
 Tags: scroll top, back to top, button, to top, jquery, scroll to top
 Requires at least: 3.6
 Tested up to: 3.9
-Stable tag: 0.3
+Stable tag: 0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ This plugin will enable a custom and flexible Scroll/Back To Top to your WordPre
 
 = Features Include: =
 
-* WordPress 3.9 Support.
+* WordPress 3.9.1 Support.
 * Unlimited colors.
 * Retina support(icon font).
 * Choose text or icon font.
@@ -24,9 +24,9 @@ This plugin will enable a custom and flexible Scroll/Back To Top to your WordPre
 * Position switcher(left or right).
 * Change animation you like.
 * Automatically hide on screen width smaller than 600 pixels.
+* Custom CSS area
 
 = To Do =
-* Add custom CSS box to give you more control to the scroll top style
 * Add more icon fonts
 
 = Plugin Info =
@@ -64,9 +64,10 @@ I spent most of my free time maintaining and supporting my free themes and plugi
 
 == Changelog ==
 
-= 0.4 - Coming Soon =
-* Add custom CSS box to give you more control to the scroll top style
-* Add more icon fonts
+= 0.4 - 7/13/2014 =
+* Add custom css box
+* Update jquery plugin
+* Update language
 
 = 0.3 - 4/22/2014 =
 * Update Language
