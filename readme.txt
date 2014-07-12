@@ -3,7 +3,7 @@ Contributors: satrya, themephe
 Donate link: http://satrya.me/donate/
 Tags: scroll top, back to top, button, to top, jquery, scroll to top
 Requires at least: 3.6
-Tested up to: 3.9
+Tested up to: 3.9.1
 Stable tag: 0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
