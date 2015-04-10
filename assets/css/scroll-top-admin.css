@@ -1,3 +1,7 @@
 .scroll-top-settings {
 	margin-right: 300px;
 }
+
+.scroll-top-settings .inside img {
+	width: 100%;
+}

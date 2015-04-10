@@ -413,15 +413,10 @@ function scroll_top_plugin_settings_render_page() { ?>
 					</div>
 
 					<div class="postbox">
-						<h3 class="hndle"><span><?php _e( 'More Plugins', 'scrolltop' ); ?></span></h3>
+						<h3 class="hndle"><span><?php _e( 'Premium Magazine Theme', 'scrolltop' ); ?></span></h3>
 						<div class="inside">
-							<ul class="ul-square">
-								<li><a href="http://wordpress.org/plugins/recent-posts-widget-extended/" target="_blank">Recent Posts Widget Extended</a></li>
-								<li><a href="http://wordpress.org/plugins/advanced-random-posts-widget/" target="_blank">Advanced Random Posts Widget</a></li>
-								<li><a href="http://wordpress.org/plugins/metro-buttons/" target="_blank">Metro Buttons</a></li>
-								<li><a href="http://wordpress.org/plugins/easy-alert-shortcode/" target="_blank">Easy Alert Shortcode</a></li>
-								<li><a href="http://wordpress.org/plugins/images-beautifier/" target="_blank">Images Beautifier</a></li>
-							</ul>
+							<p>The Daily theme is designed to work for personal bloggers, online magazines, newspapers or community blogs.</p>
+							<a href="http://www.theme-junkie.com/amember/go.php?r=18014&i=l16"><img src="<?php echo ST_ASSETS . '/img/daily.jpg'; ?>"></a>
 						</div>
 					</div>
 

@@ -1,10 +1,10 @@
 === Scroll Top ===
-Contributors: satrya, themephe
+Contributors: satrya
 Donate link: http://satrya.me/donate/
 Tags: scroll top, back to top, button, to top, jquery, scroll to top
 Requires at least: 3.6
-Tested up to: 3.9.1
-Stable tag: 0.4
+Tested up to: 4.1.1
+Stable tag: 0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,11 +12,10 @@ Automaticlly adds a flexible Scroll to Top button to your WordPress website. You
 
 == Description ==
 
-This plugin will enable a custom and flexible Scroll/Back To Top to your WordPress website. It comes with unlimited color choices, icon font option to support retina device, hide on screen width smaller than 600 pixels. [Scroll Top Plugin](http://satrya.me/wordpress-plugins/scroll-top/) page info.
+This plugin will enable a custom and flexible Scroll/Back To Top to your WordPress website. It comes with unlimited color choices, icon font option to support retina device, hide on screen width smaller than 600 pixels.
 
 = Features Include: =
 
-* WordPress 3.9.1 Support.
 * Unlimited colors.
 * Retina support(icon font).
 * Choose text or icon font.
@@ -25,9 +24,6 @@ This plugin will enable a custom and flexible Scroll/Back To Top to your WordPre
 * Change animation you like.
 * Automatically hide on screen width smaller than 600 pixels.
 * Custom CSS area
-
-= To Do =
-* Add more icon fonts
 
 = Plugin Info =
 * Developed by [Satrya](http://satrya.me/)
@@ -63,6 +59,10 @@ I spent most of my free time maintaining and supporting my free themes and plugi
 2. Scroll to top in action.
 
 == Changelog ==
+
+= 0.5 - 4/10/2015 =
+* Support WordPress 4.1.1
+* Update ScrollUp js
 
 = 0.4 - 7/13/2014 =
 * Add custom css box

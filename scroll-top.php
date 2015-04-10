@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name:  Scroll Top
- * Plugin URI:   http://satrya.me/wordpress-plugins/scroll-top/
+ * Plugin URI:   https://wordpress.org/plugins/scroll-top/
  * Description:  Adds a flexible Scroll to Top button to any post/page of your WordPress website.
- * Version:      0.4
+ * Version:      0.5
  * Author:       Satrya
  * Author URI:   http://satrya.me/
  * Author Email: satrya@satrya.me
