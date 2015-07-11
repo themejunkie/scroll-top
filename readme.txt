@@ -1,10 +1,9 @@
 === Scroll Top ===
 Contributors: satrya
-Donate link: http://satrya.me/donate/
 Tags: scroll top, back to top, button, to top, jquery, scroll to top
 Requires at least: 3.6
-Tested up to: 4.1.1
-Stable tag: 0.5
+Tested up to: 4.3
+Stable tag: 0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,9 +27,6 @@ This plugin will enable a custom and flexible Scroll/Back To Top to your WordPre
 = Plugin Info =
 * Developed by [Satrya](http://satrya.me/)
 * Check out the [Github](https://github.com/satrya/scroll-top) repo to contribute.
-
-= Donations =
-I spent most of my free time maintaining and supporting my free themes and plugins. I will really appreciate if you could spare a couple of bucks to help me to pay my web hosting bill. [Donate here](http://satrya.me/donate/)
 
 **[Rate/Review the plugin](http://wordpress.org/support/view/plugin-reviews/scroll-top) if you find this plugin useful.**
 
@@ -59,6 +55,9 @@ I spent most of my free time maintaining and supporting my free themes and plugi
 2. Scroll to top in action.
 
 == Changelog ==
+
+= 0.6 - 7/12/2015 =
+* Prepare to support WordPress 4.3
 
 = 0.5 - 4/10/2015 =
 * Support WordPress 4.1.1
