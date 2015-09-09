@@ -5,18 +5,9 @@
  * @package    Scroll_Top
  * @since      0.1.0
  * @author     Satrya
- * @copyright  Copyright (c) 2014, Satrya
+ * @copyright  Copyright (c) 2014-2015, Satrya
  * @license    http://www.gnu.org/licenses/gpl-2.0.html
  */
-
-/* Load the scripts for the plugin. */
-add_action( 'wp_enqueue_scripts', 'scroll_top_load_scripts' );
-
-/* Initialize the scrollup jquery plugin. */
-add_action( 'wp_footer', 'scroll_top_scrollup_init' );
-
-/* Custom CSS for the scrollup. */
-add_action( 'wp_head', 'scroll_top_custom_css' );
 
 /**
  * Return the default plugin settings.
@@ -40,7 +31,7 @@ function scroll_top_get_default_settings() {
 		'scroll_top_css'        => "#scrollUp {\npadding: 0px 10px;\n}"
 	);
 
-	/* Allow dev to filter the default settings. */
+	// Allow dev to filter the default settings.
 	return apply_filters( 'scroll_top_default_settings', $default_settings );
 }
 
@@ -63,20 +54,21 @@ function scroll_top_get_plugin_settings( $option = '' ) {
  */
 function scroll_top_load_scripts() {
 
-	/* Get the enable option. */
+	// Get the enable option.
 	$enable  = scroll_top_get_plugin_settings( 'scroll_top_enable' );
 
-	/* Check if scroll top enable. */
+	// Check if scroll top enable.
 	if( $enable == '1' ) {
 
-		/* Load the plugin front-end style. */
+		// Load the plugin front-end style.
 		wp_enqueue_style( 'scroll-top-css', trailingslashit( ST_ASSETS ) . 'css/scroll-top.css', null, null );
 
-		/* Load the jQuery plugin. */
+		// Load the jQuery plugin.
 		wp_enqueue_script( 'scroll-top-js', trailingslashit( ST_ASSETS ) . 'js/jquery.scrollUp.min.js', array( 'jquery' ), null, true );
 	}
 
 }
+add_action( 'wp_enqueue_scripts', 'scroll_top_load_scripts' );
 
 /**
  * Initialize the scrollup jquery plugin.
@@ -84,13 +76,16 @@ function scroll_top_load_scripts() {
  * @since 0.1
  */
 function scroll_top_scrollup_init() {
+
+	// Get the plugin settings value
 	$enable  = scroll_top_get_plugin_settings( 'scroll_top_enable' );
 	$speed   = absint( scroll_top_get_plugin_settings( 'scroll_top_speed' ) );
 	$dist    = absint( scroll_top_get_plugin_settings( 'scroll_top_distance' ) );
 	$animate = scroll_top_get_plugin_settings( 'scroll_top_animation' );
 	$type    = scroll_top_get_plugin_settings( 'scroll_top_type' );
-	$text    = strip_tags( scroll_top_get_plugin_settings( 'scroll_top_text' ) );
+	$text    = wp_filter_post_kses( scroll_top_get_plugin_settings( 'scroll_top_text' ) );
 
+	// Scroll top type
 	$scrolltype = '';
 	if( $type == 'text' ) {
 		$scrolltype = $text;
@@ -98,7 +93,8 @@ function scroll_top_scrollup_init() {
 		$scrolltype = '<span class="scroll-top"><i class="icon-up-open"></i></span>';
 	}
 
-	if( $enable == '1' ) {
+	// Loads the scroll top
+	if ( $enable == '1' ) {
 
 		echo '
 		<script id="scrolltop-custom-js">
@@ -116,6 +112,7 @@ function scroll_top_scrollup_init() {
 	}
 
 }
+add_action( 'wp_footer', 'scroll_top_scrollup_init' );
 
 /**
  * Custom inline css for plugin usage.
@@ -123,6 +120,8 @@ function scroll_top_scrollup_init() {
  * @since  0.1
  */
 function scroll_top_custom_css() {
+
+	// Get the plugin settings value
 	$enable   = scroll_top_get_plugin_settings( 'scroll_top_enable' );
 	$color    = scroll_top_get_plugin_settings( 'scroll_top_color' );
 	$bgcolor  = scroll_top_get_plugin_settings( 'scroll_top_bg_color' );
@@ -155,15 +154,18 @@ function scroll_top_custom_css() {
 		$scroll_fontsize = '15px';
 	}
 
-	if( $enable == '1' ) {
+	if ( $enable == '1' ) {
 
-echo '<style id="scrolltop-custom-style">
-#scrollUp{border-radius:' . $scroll_radius . ';-webkit-border-radius:' . $scroll_radius . ';-moz-border-radius:' . $scroll_radius . ';font-size:' . $scroll_fontsize . ';opacity:0.8;filter:alpha(opacity=80);bottom:20px;' . $scroll_position . 'color:' . $color . ';background:' . $bgcolor . ';}
-#scrollUp:hover{opacity:1;filter:alpha(opacity=100);}
-@media screen and (max-width: 600px) {#scrollUp{display:none}}
-' . $css . '
-</style>';
+		echo '<!-- Scroll Top -->' . "\n";
+		echo '<style id="scrolltop-custom-style">
+		#scrollUp{border-radius:' . $scroll_radius . ';-webkit-border-radius:' . $scroll_radius . ';-moz-border-radius:' . $scroll_radius . ';font-size:' . $scroll_fontsize . ';opacity:0.8;filter:alpha(opacity=80);bottom:20px;' . $scroll_position . 'color:' . $color . ';background:' . $bgcolor . '; visibility: hidden;}
+		#scrollUp:hover{opacity:1;filter:alpha(opacity=100);}
+		@media (min-width: 600px) { #scrollUp { visibility: visible; } }
+		' . $css . '
+		</style>' . "\n";
+		echo '<!-- End Scroll Top - https://wordpress.org/plugins/scroll-top/ -->' . "\n";
 
 	}
 
 }
+add_action( 'wp_head', 'scroll_top_custom_css' );

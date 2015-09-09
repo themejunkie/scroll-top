@@ -5,18 +5,9 @@
  * @package    Scroll_Top
  * @since      0.1.0
  * @author     Satrya
- * @copyright  Copyright (c) 2014, Satrya
+ * @copyright  Copyright (c) 2014-2015, Satrya
  * @license    http://www.gnu.org/licenses/gpl-2.0.html
  */
-
-/* Plugin settings setup. */
-add_action( 'admin_menu', 'scroll_top_admin_menu' );
-
-/* Register the plugin settings. */
-add_action( 'admin_init', 'scroll_top_register_settings' );
-
-/* Register the setting sections and fields. */
-add_action( 'admin_init', 'scroll_top_setting_sections_fields' );
 
 /**
  * Sets up the plugin settings page and registers the plugin settings.
@@ -34,13 +25,15 @@ function scroll_top_admin_menu() {
 		'scroll_top_plugin_settings_render_page' 
 	);
 
-	if ( ! $settings )
+	if ( ! $settings ) {
 		return;
+	}
 
-	/* Provided hook_suffix that's returned to add scripts only on settings page. */
+	// Provided hook_suffix that's returned to add scripts only on settings page.
     add_action( 'load-' . $settings, 'scroll_top_styles_scripts' );
 
 }
+add_action( 'admin_menu', 'scroll_top_admin_menu' );
 
 /**
  * Registers the Scroll Top settings.
@@ -57,6 +50,7 @@ function scroll_top_register_settings() {
 	);
 
 }
+add_action( 'admin_init', 'scroll_top_register_settings' );
 
 /**
  * Register the setting sections and fields.
@@ -175,6 +169,7 @@ function scroll_top_setting_sections_fields() {
 	);
 
 }
+add_action( 'admin_init', 'scroll_top_setting_sections_fields' );
 
 /**
  * Enable/disable field fallback.
@@ -405,9 +400,9 @@ function scroll_top_plugin_settings_render_page() { ?>
 						<h3 class="hndle"><span><?php _e( 'Plugin Info', 'scrolltop' ); ?></span></h3>
 						<div class="inside">
 							<ul class="ul-square">
-								<li><a href="http://satrya.me/" target="_blank"><?php _e( 'Author Website', 'scrolltop' ); ?></a></li>
+								<li><a href="http://satrya.me/" target="_blank"><?php _e( 'Author\'s Website', 'scrolltop' ); ?></a></li>
 								<li><a href="http://wordpress.org/support/plugin/scroll-top" target="_blank"><?php _e( 'Support', 'scrolltop' ); ?></a></li>
-								<li><a href="http://wordpress.org/support/view/plugin-reviews/scroll-top" target="_blank"><?php _e( 'Rate plugin', 'scrolltop' ); ?></a></li>
+								<li><a href="http://wordpress.org/support/view/plugin-reviews/scroll-top" target="_blank"><?php _e( 'Rate/Review plugin', 'scrolltop' ); ?></a></li>
 							</ul>
 						</div>
 					</div>
@@ -475,9 +470,9 @@ function scroll_top_plugin_settings_validate( $settings ) {
  */
 function scroll_top_styles_scripts() {
 
-	/* Load plugin admin style. */
+	// Load plugin admin style.
 	wp_enqueue_style( 'scroll-top-css', trailingslashit( ST_ASSETS ) . 'css/scroll-top-admin.css', array( 'wp-color-picker' ), null );
 
-	/* Load plugin admin script. */
+	// Load plugin admin script.
 	wp_enqueue_script( 'scroll-top-scripts', trailingslashit( ST_ASSETS ) . 'js/scroll-top-admin.js', array( 'jquery', 'wp-color-picker' ), null, true );
 }

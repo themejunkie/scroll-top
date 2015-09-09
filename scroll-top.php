@@ -2,8 +2,8 @@
 /**
  * Plugin Name:  Scroll Top
  * Plugin URI:   http://satrya.me/projects/scroll-top/
- * Description:  Adds a flexible Scroll to Top button to any post/page of your WordPress website.
- * Version:      0.6
+ * Description:  Adds a flexible Back to Top button to any post/page of your WordPress website.
+ * Version:      0.7
  * Author:       Satrya
  * Author URI:   http://satrya.me/
  * Author Email: satrya@satrya.me
@@ -21,7 +21,7 @@
  * @package    Scroll_Top
  * @since      0.1.0
  * @author     Satrya
- * @copyright  Copyright (c) 2014, Satrya
+ * @copyright  Copyright (c) 2014-2015, Satrya
  * @license    http://www.gnu.org/licenses/gpl-2.0.html
  */
 
@@ -37,16 +37,16 @@ class Scroll_Top {
 	 */
 	public function __construct() {
 
-		/* Set the constants needed by the plugin. */
+		// Set the constants needed by the plugin.
 		add_action( 'plugins_loaded', array( &$this, 'constants' ), 1 );
 
-		/* Internationalize the text strings used. */
+		// Internationalize the text strings used.
 		add_action( 'plugins_loaded', array( &$this, 'i18n' ), 2 );
 
-		/* Load the functions files. */
+		// Load the functions files.
 		add_action( 'plugins_loaded', array( &$this, 'includes' ), 3 );
 		
-		/* Load the admin files. */
+		// Load the admin files.
 		add_action( 'plugins_loaded', array( &$this, 'admin' ), 4 );
 
 	}
@@ -58,19 +58,19 @@ class Scroll_Top {
 	 */
 	public function constants() {
 
-		/* Set constant path to the plugin directory. */
+		// Set constant path to the plugin directory.
 		define( 'ST_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 
-		/* Set the constant path to the plugin directory URI. */
+		// Set the constant path to the plugin directory URI.
 		define( 'ST_URI', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 
-		/* Set the constant path to the inc directory. */
+		// Set the constant path to the inc directory.
 		define( 'ST_INCLUDES', ST_DIR . trailingslashit( 'inc' ) );
 
-		/* Set the constant path to the admin directory. */
+		// Set the constant path to the admin directory.
 		define( 'ST_ADMIN', ST_DIR . trailingslashit( 'admin' ) );
 
-		/* Set the constant path to the aseets directory. */
+		// Set the constant path to the aseets directory.
 		define( 'ST_ASSETS', ST_URI . trailingslashit( 'assets' ) );
 
 	}

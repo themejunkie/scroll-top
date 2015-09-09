@@ -1,17 +1,17 @@
 === Scroll Top ===
 Contributors: satrya
-Tags: scroll top, back to top, button, to top, jquery, scroll to top
-Requires at least: 3.6
+Tags: back to top, button, to top, jquery, scroll to top, scroll top
+Requires at least: 4.0
 Tested up to: 4.3
-Stable tag: 0.6
+Stable tag: 0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Automaticlly adds a flexible Scroll to Top button to your WordPress website. You can choose color you like, Icon Font or plain text and much more.
+Automaticlly adds a flexible Back to Top button to your WordPress website. You can choose color you like, Icon Font or plain text and much more.
 
 == Description ==
 
-This plugin will enable a custom and flexible Scroll/Back To Top to your WordPress website. It comes with unlimited color choices, icon font option to support retina device, hide on screen width smaller than 600 pixels.
+This plugin will enable a custom and flexible Back To Top to your WordPress website. It comes with unlimited color choices, icon font option to support retina device, hide on screen width smaller than 600 pixels.
 
 = Features Include: =
 
@@ -23,12 +23,17 @@ This plugin will enable a custom and flexible Scroll/Back To Top to your WordPre
 * Change animation you like.
 * Automatically hide on screen width smaller than 600 pixels.
 * Custom CSS area
+* Mobile device friendly plugin settings
+
+= Languages: =
+* Russian - Thanks [GrayHunter](http://oziblog.ru/)
+* Serbo-Croatian - Thanks [Andrijana Nikolic](http://webhostinggeeks.com/)
 
 = Plugin Info =
-* Developed by [Satrya](http://satrya.me/)
 * Check out the [Github](https://github.com/satrya/scroll-top) repo to contribute.
+* [Rate/Review the plugin](http://wordpress.org/support/view/plugin-reviews/scroll-top) if you find this plugin useful.
 
-**[Rate/Review the plugin](http://wordpress.org/support/view/plugin-reviews/scroll-top) if you find this plugin useful.**
+> Developed with ♥️ by [Satrya](http://satrya.me/) in Indonesia
 
 == Installation ==
 
@@ -55,6 +60,12 @@ This plugin will enable a custom and flexible Scroll/Back To Top to your WordPre
 2. Scroll to top in action.
 
 == Changelog ==
+
+= 0.7 - 09/09/2015 =
+* Fixed the `@media` queries issue not hiding the button on screen width smaller than 600px
+* Plugin settings now support on mobile device
+* Add Serbo-Croatian language
+* Updated language
 
 = 0.6 - 7/12/2015 =
 * Prepare to support WordPress 4.3
