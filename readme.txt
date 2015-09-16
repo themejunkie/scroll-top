@@ -30,7 +30,7 @@ This plugin will enable a custom and flexible Back To Top to your WordPress webs
 * Serbo-Croatian - Thanks [Andrijana Nikolic](http://webhostinggeeks.com/)
 
 = Plugin Info =
-* Check out the [Github](https://github.com/satrya/scroll-top) repo to contribute.
+* Check out the [Github](https://github.com/themephe/scroll-top) repo to contribute.
 * [Rate/Review the plugin](http://wordpress.org/support/view/plugin-reviews/scroll-top) if you find this plugin useful.
 
 > Developed by [ThemePhe](https://themephe.com/) in Indonesia
