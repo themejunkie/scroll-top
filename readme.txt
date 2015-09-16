@@ -1,5 +1,5 @@
 === Scroll Top ===
-Contributors: satrya
+Contributors: satrya, themephe
 Tags: back to top, button, to top, jquery, scroll to top, scroll top
 Requires at least: 4.0
 Tested up to: 4.3
@@ -33,7 +33,7 @@ This plugin will enable a custom and flexible Back To Top to your WordPress webs
 * Check out the [Github](https://github.com/satrya/scroll-top) repo to contribute.
 * [Rate/Review the plugin](http://wordpress.org/support/view/plugin-reviews/scroll-top) if you find this plugin useful.
 
-> Developed with ♥️ by [Satrya](http://satrya.me/) in Indonesia
+> Developed by [ThemePhe](https://themephe.com/) in Indonesia
 
 == Installation ==
 
