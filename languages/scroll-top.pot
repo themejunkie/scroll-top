@@ -1,16 +1,16 @@
-# Copyright (C) 2015 Satrya
+# Copyright (C) 2015 Theme Junkie
 # This file is distributed under the same license as the Scroll Top package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Scroll Top 0.7\n"
-"Report-Msgid-Bugs-To: http://satrya.me/\n"
-"POT-Creation-Date: 2015-09-09 05:56:57+00:00\n"
+"Project-Id-Version: Scroll Top 0.8\n"
+"Report-Msgid-Bugs-To: http://www.theme-junkie.com/support\n"
+"POT-Creation-Date: 2015-10-07 16:13:57+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Satrya (satrya@satrya.me)\n"
-"Language-Team: Satrya (satrya@satrya.me)\n"
+"Last-Translator: Theme Junkie (support@theme-junkie.com)\n"
+"Language-Team: Theme Junkie (support@theme-junkie.com)\n"
 "X-Generator: grunt-wp-i18n 0.5.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-Basepath: ..\n"
@@ -23,7 +23,7 @@ msgstr ""
 "x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
 "X-Textdomain-Support: yes\n"
 
-#: admin/admin.php:21 admin/admin.php:384
+#: admin/admin.php:15 admin/admin.php:378
 msgid "Scroll Top Settings"
 msgstr ""
 
@@ -31,148 +31,148 @@ msgstr ""
 msgid "Scroll Top"
 msgstr ""
 
-#: admin/admin.php:75
+#: admin/admin.php:69
 msgid "Enable"
 msgstr ""
 
-#: admin/admin.php:84
+#: admin/admin.php:78
 msgid "Type"
 msgstr ""
 
-#: admin/admin.php:93 admin/admin.php:201
+#: admin/admin.php:87 admin/admin.php:195
 msgid "Text"
 msgstr ""
 
-#: admin/admin.php:102
+#: admin/admin.php:96
 msgid "Position"
 msgstr ""
 
-#: admin/admin.php:111
+#: admin/admin.php:105
 msgid "Color"
 msgstr ""
 
-#: admin/admin.php:120
+#: admin/admin.php:114
 msgid "Background Color"
 msgstr ""
 
-#: admin/admin.php:129
+#: admin/admin.php:123
 msgid "Radius"
 msgstr ""
 
-#: admin/admin.php:138
+#: admin/admin.php:132
 msgid "Scroll to top animation"
 msgstr ""
 
-#: admin/admin.php:147
+#: admin/admin.php:141
 msgid "Scroll to top speed"
 msgstr ""
 
-#: admin/admin.php:156
+#: admin/admin.php:150
 msgid "Scroll to top distance"
 msgstr ""
 
-#: admin/admin.php:165
+#: admin/admin.php:159
 msgid "Custom CSS"
 msgstr ""
 
-#: admin/admin.php:184
+#: admin/admin.php:178
 msgid "Enable scroll top?"
 msgstr ""
 
-#: admin/admin.php:206
+#: admin/admin.php:200
 msgid "Icon Font"
 msgstr ""
 
-#: admin/admin.php:209
+#: admin/admin.php:203
 msgid "Select the type of the scroll to top."
 msgstr ""
 
-#: admin/admin.php:225
+#: admin/admin.php:219
 msgid "If you choose the Text type, then please type the text here."
 msgstr ""
 
-#: admin/admin.php:241
+#: admin/admin.php:235
 msgid "Left Side"
 msgstr ""
 
-#: admin/admin.php:246
+#: admin/admin.php:240
 msgid "Right Side"
 msgstr ""
 
-#: admin/admin.php:249
+#: admin/admin.php:243
 msgid "Select the position of the scroll to top button/text."
 msgstr ""
 
-#: admin/admin.php:265
+#: admin/admin.php:259
 msgid "Select the color for the scroll top button."
 msgstr ""
 
-#: admin/admin.php:280
+#: admin/admin.php:274
 msgid "Select the background color for the scroll top button."
 msgstr ""
 
-#: admin/admin.php:295
+#: admin/admin.php:289
 msgid "Square"
 msgstr ""
 
-#: admin/admin.php:300
+#: admin/admin.php:294
 msgid "Rounded"
 msgstr ""
 
-#: admin/admin.php:303
+#: admin/admin.php:297
 msgid "The border radius type."
 msgstr ""
 
-#: admin/admin.php:318
+#: admin/admin.php:312
 msgid "Fade"
 msgstr ""
 
-#: admin/admin.php:323
+#: admin/admin.php:317
 msgid "Slide"
 msgstr ""
 
-#: admin/admin.php:328
+#: admin/admin.php:322
 msgid "None"
 msgstr ""
 
-#: admin/admin.php:343
+#: admin/admin.php:337
 msgid " millisecond"
 msgstr ""
 
-#: admin/admin.php:357
+#: admin/admin.php:351
 msgid " px"
 msgstr ""
 
-#: admin/admin.php:392
+#: admin/admin.php:386
 msgid "Update Settings"
 msgstr ""
 
-#: admin/admin.php:400
+#: admin/admin.php:394
 msgid "Plugin Info"
 msgstr ""
 
-#: admin/admin.php:403
+#: admin/admin.php:397
 msgid "Author's Website"
 msgstr ""
 
-#: admin/admin.php:404
+#: admin/admin.php:398
 msgid "Support"
 msgstr ""
 
-#: admin/admin.php:405
+#: admin/admin.php:399
 msgid "Rate/Review plugin"
 msgstr ""
 
-#: admin/admin.php:411
+#: admin/admin.php:405
 msgid "Premium Magazine Theme"
 msgstr ""
 
-#: inc/functions.php:23
+#: inc/functions.php:17
 msgid "Back to Top"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://satrya.me/projects/scroll-top/"
+msgid "https://wordpress.org/plugins/scroll-top/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -182,9 +182,9 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Satrya"
+msgid "Theme Junkie"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://satrya.me/"
+msgid "http://www.theme-junkie.com/"
 msgstr ""

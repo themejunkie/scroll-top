@@ -1,28 +1,22 @@
 <?php
 /**
  * Plugin Name:  Scroll Top
- * Plugin URI:   http://satrya.me/projects/scroll-top/
+ * Plugin URI:   https://wordpress.org/plugins/scroll-top/
  * Description:  Adds a flexible Back to Top button to any post/page of your WordPress website.
- * Version:      0.7
- * Author:       Satrya
- * Author URI:   http://satrya.me/
- * Author Email: satrya@satrya.me
+ * Version:      0.8
+ * Author:       Theme Junkie
+ * Author URI:   http://www.theme-junkie.com/
+ * Author Email: support@theme-junkie.com
  *
- * This program is free software; you can redistribute it and/or modify it under the terms of the GNU 
- * General Public License as published by the Free Software Foundation; either version 2 of the License, 
+ * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
+ * General Public License as published by the Free Software Foundation; either version 2 of the License,
  * or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * You should have received a copy of the GNU General Public License along with this program; if not, write 
+ * You should have received a copy of the GNU General Public License along with this program; if not, write
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
- *
- * @package    Scroll_Top
- * @since      0.1.0
- * @author     Satrya
- * @copyright  Copyright (c) 2014-2015, Satrya
- * @license    http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 // Exit if accessed directly
@@ -45,7 +39,7 @@ class Scroll_Top {
 
 		// Load the functions files.
 		add_action( 'plugins_loaded', array( &$this, 'includes' ), 3 );
-		
+
 		// Load the admin files.
 		add_action( 'plugins_loaded', array( &$this, 'admin' ), 4 );
 
@@ -81,7 +75,7 @@ class Scroll_Top {
 	 * @since  0.1
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'scrolltop', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		load_plugin_textdomain( 'scroll-top', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 
 	/**

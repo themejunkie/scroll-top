@@ -1,12 +1,6 @@
 <?php
 /**
  * Sets up custom filters for the plugin's output.
- *
- * @package    Scroll_Top
- * @since      0.1.0
- * @author     Satrya
- * @copyright  Copyright (c) 2014-2015, Satrya
- * @license    http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 /**
@@ -20,7 +14,7 @@ function scroll_top_get_default_settings() {
 	$default_settings = array(
 		'scroll_top_enable'     => 1,
 		'scroll_top_type'       => 'icon',
-		'scroll_top_text'       => __( 'Back to Top', 'scrolltop' ),
+		'scroll_top_text'       => __( 'Back to Top', 'scroll-top' ),
 		'scroll_top_position'   => 'right',
 		'scroll_top_color'      => '#ffffff',
 		'scroll_top_bg_color'   => '#000000',
@@ -36,7 +30,7 @@ function scroll_top_get_default_settings() {
 }
 
 /**
- * Function for quickly grabbing settings for the plugin without having to call get_option() 
+ * Function for quickly grabbing settings for the plugin without having to call get_option()
  * every time we need a setting.
  *
  * @since  0.1

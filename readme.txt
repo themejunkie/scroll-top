@@ -1,9 +1,9 @@
 === Scroll Top ===
-Contributors: satrya, themephe
+Contributors: themejunkie, satrya
 Tags: back to top, button, to top, jquery, scroll to top, scroll top
 Requires at least: 4.0
-Tested up to: 4.3
-Stable tag: 0.7
+Tested up to: 4.3.1
+Stable tag: 0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,10 +30,10 @@ This plugin will enable a custom and flexible Back To Top to your WordPress webs
 * Serbo-Croatian - Thanks [Andrijana Nikolic](http://webhostinggeeks.com/)
 
 = Plugin Info =
-* Check out the [Github](https://github.com/themephe/scroll-top) repo to contribute.
+* Check out the [Github](https://github.com/themejunkie/scroll-top) repo to contribute.
 * [Rate/Review the plugin](http://wordpress.org/support/view/plugin-reviews/scroll-top) if you find this plugin useful.
 
-> Developed by [ThemePhe](https://themephe.com/) in Indonesia
+> Developed by [Theme Junkie](http://www.theme-junkie.com/)
 
 == Installation ==
 
@@ -60,6 +60,11 @@ This plugin will enable a custom and flexible Back To Top to your WordPress webs
 2. Scroll to top in action.
 
 == Changelog ==
+
+= 0.8 - Oct 7, 2015 =
+* Support WordPress 4.3.1
+* Updated language
+* Changed text-domain to `scroll-top`
 
 = 0.7 - 09/09/2015 =
 * Fixed the `@media` queries issue not hiding the button on screen width smaller than 600px
