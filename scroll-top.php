@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name:  Scroll Top
- * Plugin URI:   https://wordpress.org/plugins/scroll-top/
+ * Plugin URI:   https://www.theme-junkie.com/plugins/scroll-top/
  * Description:  Adds a flexible Back to Top button to any post/page of your WordPress website.
- * Version:      0.8
+ * Version:      0.9
  * Author:       Theme Junkie
  * Author URI:   http://www.theme-junkie.com/
  * Author Email: support@theme-junkie.com
