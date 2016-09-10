@@ -3,7 +3,7 @@
  * Plugin Name:  Scroll Top
  * Plugin URI:   https://6hourcreative.com/plugins/scroll-top/
  * Description:  Adds a flexible Back to Top button to any post/page of your WordPress website.
- * Version:      1.0.0
+ * Version:      1.0.1
  * Author:       6 Hour Creative
  * Author URI:   https://6hourcreative.com/
  * Author Email: hi@6hourcreative.com

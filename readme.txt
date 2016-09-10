@@ -1,9 +1,9 @@
 === Smart Scroll Top ===
 Contributors: 6hourcreative, satrya
-Tags: back to top, button, to top, jquery, scroll to top, scroll top
+Tags: back to top, button, to top, jquery, scroll to top, scroll top, customization
 Requires at least: 4.0
 Tested up to: 4.6.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,11 +19,15 @@ This plugin will enable a custom and flexible Back To Top to your WordPress webs
 * Retina support(icon font).
 * Choose text or icon font.
 * Customizable text.
-* Position switcher(left or right).
+* Position switcher (left or right).
 * Change animation you like.
 * Automatically hide on screen width smaller than 600 pixels.
 * Custom CSS area
 * Mobile device friendly plugin settings
+
+= Contribute =
+
+If you want to contribute, we hosted the plugin on github: [https://github.com/6hourcreative/scroll-top](https://github.com/6hourcreative/scroll-top)
 
 == Installation ==
 
@@ -47,9 +51,13 @@ This plugin will enable a custom and flexible Back To Top to your WordPress webs
 == Screenshots ==
 
 1. The plugin settings.
-2. Scroll to top in action.
 
 == Changelog ==
+
+= 1.0.1 - Sept 10, 2016 =
+* Secure translation text
+* More accesible plugin settings
+* New **circle** button style
 
 = 1.0.0 - Sept 10, 2016 =
 * Support WordPress 4.6.1
