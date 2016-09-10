@@ -1,0 +1,186 @@
+# Copyright (C) 2016 6 Hour Creative
+# This file is distributed under the same license as the Scroll Top package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Scroll Top 1.0.0\n"
+"Report-Msgid-Bugs-To: https://6hourcreative.com/contact/\n"
+"POT-Creation-Date: 2016-09-10 03:36:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: 6 Hour Creative\n"
+"Language-Team: 6 Hour Creative\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-KeywordsList: "
+"__;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_"
+"x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Textdomain-Support: yes\n"
+
+#: admin/admin.php:15 admin/admin.php:378
+msgid "Scroll Top Settings"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Scroll Top"
+msgstr ""
+
+#: admin/admin.php:69
+msgid "Enable"
+msgstr ""
+
+#: admin/admin.php:78
+msgid "Type"
+msgstr ""
+
+#: admin/admin.php:87 admin/admin.php:195
+msgid "Text"
+msgstr ""
+
+#: admin/admin.php:96
+msgid "Position"
+msgstr ""
+
+#: admin/admin.php:105
+msgid "Color"
+msgstr ""
+
+#: admin/admin.php:114
+msgid "Background Color"
+msgstr ""
+
+#: admin/admin.php:123
+msgid "Radius"
+msgstr ""
+
+#: admin/admin.php:132
+msgid "Scroll to top animation"
+msgstr ""
+
+#: admin/admin.php:141
+msgid "Scroll to top speed"
+msgstr ""
+
+#: admin/admin.php:150
+msgid "Scroll to top distance"
+msgstr ""
+
+#: admin/admin.php:159
+msgid "Custom CSS"
+msgstr ""
+
+#: admin/admin.php:178
+msgid "Enable scroll top?"
+msgstr ""
+
+#: admin/admin.php:200
+msgid "Icon Font"
+msgstr ""
+
+#: admin/admin.php:203
+msgid "Select the type of the scroll to top."
+msgstr ""
+
+#: admin/admin.php:219
+msgid "If you choose the Text type, then please type the text here."
+msgstr ""
+
+#: admin/admin.php:235
+msgid "Left Side"
+msgstr ""
+
+#: admin/admin.php:240
+msgid "Right Side"
+msgstr ""
+
+#: admin/admin.php:243
+msgid "Select the position of the scroll to top button/text."
+msgstr ""
+
+#: admin/admin.php:259
+msgid "Select the color for the scroll top button."
+msgstr ""
+
+#: admin/admin.php:274
+msgid "Select the background color for the scroll top button."
+msgstr ""
+
+#: admin/admin.php:289
+msgid "Square"
+msgstr ""
+
+#: admin/admin.php:294
+msgid "Rounded"
+msgstr ""
+
+#: admin/admin.php:297
+msgid "The border radius type."
+msgstr ""
+
+#: admin/admin.php:312
+msgid "Fade"
+msgstr ""
+
+#: admin/admin.php:317
+msgid "Slide"
+msgstr ""
+
+#: admin/admin.php:322
+msgid "None"
+msgstr ""
+
+#: admin/admin.php:337
+msgid " millisecond"
+msgstr ""
+
+#: admin/admin.php:351
+msgid " px"
+msgstr ""
+
+#: admin/admin.php:386
+msgid "Update Settings"
+msgstr ""
+
+#: admin/admin.php:394
+msgid "Plugin Info"
+msgstr ""
+
+#: admin/admin.php:397
+msgid "Author's Website"
+msgstr ""
+
+#: admin/admin.php:398
+msgid "Support"
+msgstr ""
+
+#: admin/admin.php:399
+msgid "Rate/Review plugin"
+msgstr ""
+
+#: inc/functions.php:17
+msgid "Back to Top"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://6hourcreative.com/plugins/scroll-top/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Adds a flexible Back to Top button to any post/page of your WordPress "
+"website."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "6 Hour Creative"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://6hourcreative.com/"
+msgstr ""

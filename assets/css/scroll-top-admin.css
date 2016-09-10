@@ -1,0 +1,15 @@
+@media(min-width: 801px) {
+	.scroll-top-settings {
+		margin-right: 300px;
+	}
+}
+
+@media(max-width: 768px) {
+	.scroll-top-settings .form-table td {
+		margin-bottom: 20px;
+	}
+}
+
+.scroll-top-settings .inside img {
+	width: 100%;
+}
