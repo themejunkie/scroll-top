@@ -6,14 +6,13 @@
 /**
  * Sets up the plugin settings page and registers the plugin settings.
  *
- * @since  0.1
  * @link   http://codex.wordpress.org/Function_Reference/add_options_page
  */
 function scroll_top_admin_menu() {
 
 	$settings = add_options_page(
-		__( 'Scroll Top Settings', 'scroll-top' ),
-		__( 'Scroll Top', 'scroll-top' ),
+		esc_html__( 'Scroll Top Settings', 'scroll-top' ),
+		esc_html__( 'Scroll Top', 'scroll-top' ),
 		'manage_options',
 		'scroll_top_settings_page',
 		'scroll_top_plugin_settings_render_page'
@@ -30,9 +29,20 @@ function scroll_top_admin_menu() {
 add_action( 'admin_menu', 'scroll_top_admin_menu' );
 
 /**
+ * Enqueue custom styles & scripts for plugin usage.
+ */
+function scroll_top_styles_scripts() {
+
+	// Load plugin admin style.
+	wp_enqueue_style( 'scroll-top-css', trailingslashit( ST_ASSETS ) . 'css/scroll-top-admin.css', array( 'wp-color-picker' ), null );
+
+	// Load plugin admin script.
+	wp_enqueue_script( 'scroll-top-scripts', trailingslashit( ST_ASSETS ) . 'js/scroll-top-admin.js', array( 'jquery', 'wp-color-picker' ), null, true );
+}
+
+/**
  * Registers the Scroll Top settings.
  *
- * @since  0.1
  * @link   http://codex.wordpress.org/Function_Reference/register_setting
  */
 function scroll_top_register_settings() {
@@ -49,13 +59,12 @@ add_action( 'admin_init', 'scroll_top_register_settings' );
 /**
  * Register the setting sections and fields.
  *
- * @since  0.1
  * @link   http://codex.wordpress.org/Function_Reference/add_settings_section
  * @link   http://codex.wordpress.org/Function_Reference/add_settings_field
  */
 function scroll_top_setting_sections_fields() {
 
-	/* Add General section. */
+	// Add General section.
 	add_settings_section(
 		'scroll_top_general_settings',
 		'',
@@ -63,91 +72,91 @@ function scroll_top_setting_sections_fields() {
 		'scroll_top_settings_page'
 	);
 
-	/* Add enable/disable checkbox setting field. */
+	// Add enable/disable checkbox setting field.
 	add_settings_field(
 		'scroll_top_enable',
-		__( 'Enable', 'scroll-top' ),
+		esc_html__( 'Enable', 'scroll-top' ),
 		'scroll_top_enable_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'type' selectbox setting field. */
+	// Add 'type' selectbox setting field.
 	add_settings_field(
 		'scroll_top_type',
-		__( 'Type', 'scroll-top' ),
+		esc_html__( 'Type', 'scroll-top' ),
 		'scroll_top_type_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'text' input setting field. */
+	// Add 'text' input setting field.
 	add_settings_field(
 		'scroll_top_text',
-		__( 'Text', 'scroll-top' ),
+		esc_html__( 'Text', 'scroll-top' ),
 		'scroll_top_text_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'position' selectbox setting field. */
+	// Add 'position' selectbox setting field.
 	add_settings_field(
 		'scroll_top_position',
-		__( 'Position', 'scroll-top' ),
+		esc_html__( 'Position', 'scroll-top' ),
 		'scroll_top_position_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'color' input setting field. */
+	// Add 'color' input setting field.
 	add_settings_field(
 		'scroll_top_color',
-		__( 'Color', 'scroll-top' ),
+		esc_html__( 'Color', 'scroll-top' ),
 		'scroll_top_color_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'background color' input setting field. */
+	// Add 'background color' input setting field.
 	add_settings_field(
 		'scroll_top_bg_color',
-		__( 'Background Color', 'scroll-top' ),
+		esc_html__( 'Background Color', 'scroll-top' ),
 		'scroll_top_bg_color_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'radius' radio setting field. */
+	// Add 'radius' radio setting field.
 	add_settings_field(
 		'scroll_top_radius',
-		__( 'Radius', 'scroll-top' ),
+		esc_html__( 'Style', 'scroll-top' ),
 		'scroll_top_radius_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'animation' radio setting field. */
+	// Add 'animation' radio setting field.
 	add_settings_field(
 		'scroll_top_animation',
-		__( 'Scroll to top animation', 'scroll-top' ),
+		esc_html__( 'Animation', 'scroll-top' ),
 		'scroll_top_animation_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'speed' input setting field. */
+	// Add 'speed' input setting field.
 	add_settings_field(
 		'scroll_top_speed',
-		__( 'Scroll to top speed', 'scroll-top' ),
+		esc_html__( 'Speed', 'scroll-top' ),
 		'scroll_top_speed_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
 	);
 
-	/* Add 'Distance' input setting field. */
+	// Add 'Distance' input setting field.
 	add_settings_field(
 		'scroll_top_distance',
-		__( 'Scroll to top distance', 'scroll-top' ),
+		esc_html__( 'Distance', 'scroll-top' ),
 		'scroll_top_distance_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
@@ -156,7 +165,7 @@ function scroll_top_setting_sections_fields() {
 	// Add 'Custom CSS' textarea setting field.
 	add_settings_field(
 		'scroll_top_css',
-		__( 'Custom CSS', 'scroll-top' ),
+		esc_html__( 'Custom CSS', 'scroll-top' ),
 		'scroll_top_css_field',
 		'scroll_top_settings_page',
 		'scroll_top_general_settings'
@@ -166,253 +175,239 @@ function scroll_top_setting_sections_fields() {
 add_action( 'admin_init', 'scroll_top_setting_sections_fields' );
 
 /**
- * Enable/disable field fallback.
- *
- * @since  0.1
+ * Enable/disable field
  */
 function scroll_top_enable_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_enable' );
+?>
 
-	$output = '<label for="enable_scroll_top">';
-		$output .= '<input id="enable_scroll_top" type="checkbox" name="scroll_top_plugin_settings[scroll_top_enable]" value="1" ' . checked( 1, $settings, false ) . ' />';
-		$output .= __( 'Enable scroll top?', 'scroll-top' );
-	$output .= '</label>';
+	<fieldset>
+		<legend class="screen-reader-text"><span><?php esc_html_e( 'Enable', 'scroll-top' ); ?></span></legend>
+		<p>
+			<label for="enable_scroll_top">
+				<input id="enable_scroll_top" type="checkbox" name="scroll_top_plugin_settings[scroll_top_enable]" value="1" <?php checked( 1, $settings ); ?> />
+				<?php esc_html_e( 'Enable scroll top?', 'scroll-top' ); ?>
+			</label>
+		</p>
+	</fieldset>
 
-	echo $output;
-
+<?php
 }
 
 /**
- * Type field fallback.
- *
- * @since  0.1
+ * Type field
  */
 function scroll_top_type_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_type' );
+?>
 
-	$output = '<p><label>';
-		$output .= '<input class="scroll-top-type" type="radio" name="scroll_top_plugin_settings[scroll_top_type]" value="text" ' . checked( 'text', $settings, false ) . ' />';
-		$output .= __( 'Text', 'scroll-top' );
-	$output .= '</p></label>';
+	<fieldset>
+		<legend class="screen-reader-text"><span><?php esc_html_e( 'Type', 'scroll-top' ); ?></span></legend>
+		<p>
+			<label>
+				<input class="scroll-top-type" type="radio" name="scroll_top_plugin_settings[scroll_top_type]" value="icon" <?php checked( 'icon', $settings ); ?> />
+				<?php esc_html_e( 'Icon', 'scroll-top' ); ?>
+			</label><br />
 
-	$output .= '<p><label>';
-		$output .= '<input class="scroll-top-type" type="radio" name="scroll_top_plugin_settings[scroll_top_type]" value="icon" ' . checked( 'icon', $settings, false ) . ' />';
-		$output .= __( 'Icon Font', 'scroll-top' );
-	$output .= '</p></label>';
+			<label>
+				<input class="scroll-top-type" type="radio" name="scroll_top_plugin_settings[scroll_top_type]" value="text" <?php checked( 'text', $settings ); ?> />
+				<?php esc_html_e( 'Text', 'scroll-top' ); ?>
+			</label>
+		</p>
+	</fieldset>
 
-	$output .= '<p class="description">' . __( 'Select the type of the scroll to top.', 'scroll-top' ) . '</p>';
-
-	echo $output;
-
+<?php
 }
 
 /**
- * Text field fallback.
- *
- * @since  0.1
+ * Text field
  */
 function scroll_top_text_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_text' );
+?>
+	<input class="regular-text" id="scroll-top-text" type="text" name="scroll_top_plugin_settings[scroll_top_text]" value="<?php echo sanitize_text_field( $settings ); ?>" />
 
-	$output = '<input class="regular-text" id="scroll-top-text" type="text" name="scroll_top_plugin_settings[scroll_top_text]" value="' . $settings . '" />';
-
-	$output .= '<p class="description">' . __( 'If you choose the Text type, then please type the text here.', 'scroll-top' ) . '</p>';
-
-	echo $output;
-
+<?php
 }
 
 /**
- * Position field fallback.
- *
- * @since  0.1
+ * Position field
  */
 function scroll_top_position_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_position' );
+?>
 
-	$output = '<p><label>';
-		$output .= '<input type="radio" name="scroll_top_plugin_settings[scroll_top_position]" value="left" ' . checked( 'left', $settings, false ) . ' />';
-		$output .= __( 'Left Side', 'scroll-top' );
-	$output .= '</p></label>';
+	<fieldset>
+		<legend class="screen-reader-text"><span><?php esc_html_e( 'Position', 'scroll-top' ); ?></span></legend>
+		<p>
+			<label>
+				<input type="radio" name="scroll_top_plugin_settings[scroll_top_position]" value="right" <?php checked( 'right', $settings ); ?> />
+				<?php esc_html_e( 'Right Side', 'scroll-top' ); ?>
+			</label><br />
 
-	$output .= '<p><label>';
-		$output .= '<input type="radio" name="scroll_top_plugin_settings[scroll_top_position]" value="right" ' . checked( 'right', $settings, false ) . ' />';
-		$output .= __( 'Right Side', 'scroll-top' );
-	$output .= '</p></label>';
+			<label>
+				<input type="radio" name="scroll_top_plugin_settings[scroll_top_position]" value="left" <?php checked( 'left', $settings ); ?> />
+				<?php esc_html_e( 'Left Side', 'scroll-top' ); ?>
+			</label>
+		</p>
+	</fieldset>
 
-	$output .= '<p class="description">' . __( 'Select the position of the scroll to top button/text.', 'scroll-top' ) . '</p>';
-
-	echo $output;
-
+<?php
 }
 
 /**
- * Color field fallback.
- *
- * @since  0.1
+ * Color field
  */
 function scroll_top_color_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_color' );
-
-	$output = '<input class="color-scroll" type="text" name="scroll_top_plugin_settings[scroll_top_color]" value="' . $settings . '" />';
-
-	$output .= '<p class="description">' . __( 'Select the color for the scroll top button.', 'scroll-top' ) . '</p>';
-
-	echo $output;
+?>
+	<input class="color-scroll" type="text" name="scroll_top_plugin_settings[scroll_top_color]" value="<?php echo sanitize_hex_color( $settings ); ?>" />
+<?php
 }
 
 /**
- * Background Color field fallback.
- *
- * @since  0.1
+ * Background Color field
  */
 function scroll_top_bg_color_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_bg_color' );
-
-	$output = '<input class="color-scroll" type="text" name="scroll_top_plugin_settings[scroll_top_bg_color]" value="' . $settings . '" />';
-
-	$output .= '<p class="description">' . __( 'Select the background color for the scroll top button.', 'scroll-top' ) . '</p>';
-
-	echo $output;
+?>
+	<input class="color-scroll" type="text" name="scroll_top_plugin_settings[scroll_top_bg_color]" value="<?php echo sanitize_hex_color( $settings ); ?>" />
+<?php
 }
 
 /**
- * Radius field fallback.
- *
- * @since  0.1
+ * Radius field
  */
 function scroll_top_radius_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_radius' );
+?>
+	<fieldset>
+		<legend class="screen-reader-text"><span><?php esc_html_e( 'Radius', 'scroll-top' ); ?></span></legend>
+		<p class="checkbox-img">
+			<label>
+				<input type="radio" name="scroll_top_plugin_settings[scroll_top_radius]" value="rounded" <?php checked( 'rounded', $settings ); ?> />
+				<img src="<?php echo trailingslashit( ST_ASSETS ) . 'img/rounded.png'; ?>" alt="<?php esc_attr_e( 'Rounded', 'scroll-top' ); ?>">
+				<span class="screen-reader-text"><?php esc_html_e( 'Rounded', 'scroll-top' ); ?></span>
+			</label><br />
 
-	$output = '<p><label>';
-		$output .= '<input type="radio" name="scroll_top_plugin_settings[scroll_top_radius]" value="square" ' . checked( 'square', $settings, false ) . ' />';
-		$output .= __( 'Square', 'scroll-top' );
-	$output .= '</p></label>';
+			<label>
+				<input type="radio" name="scroll_top_plugin_settings[scroll_top_radius]" value="square" <?php checked( 'square', $settings ); ?> />
+				<img src="<?php echo trailingslashit( ST_ASSETS ) . 'img/square.png'; ?>" alt="<?php esc_attr_e( 'Square', 'scroll-top' ); ?>">
+				<span class="screen-reader-text"><?php esc_html_e( 'Square', 'scroll-top' ); ?></span>
+			</label><br />
 
-	$output .= '<p><label>';
-		$output .= '<input type="radio" name="scroll_top_plugin_settings[scroll_top_radius]" value="rounded" ' . checked( 'rounded', $settings, false ) . ' />';
-		$output .= __( 'Rounded', 'scroll-top' );
-	$output .= '</p></label>';
-
-	$output .= '<p class="description">' . __( 'The border radius type.', 'scroll-top' ) . '</p>';
-
-	echo $output;
+			<label>
+				<input type="radio" name="scroll_top_plugin_settings[scroll_top_radius]" value="circle" <?php checked( 'circle', $settings ); ?> />
+				<img src="<?php echo trailingslashit( ST_ASSETS ) . 'img/circle.png'; ?>" alt="<?php esc_attr_e( 'Circle', 'scroll-top' ); ?>">
+				<span class="screen-reader-text"><?php esc_html_e( 'Circle', 'scroll-top' ); ?></span>
+			</label>
+		</p>
+	</fieldset>
+<?php
 }
 
 /**
- * Animation field fallback.
- *
- * @since  0.1
+ * Animation field
  */
 function scroll_top_animation_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_animation' );
+?>
+	<fieldset>
+		<legend class="screen-reader-text"><span><?php esc_html_e( 'Animation', 'scroll-top' ); ?></span></legend>
+		<p>
+			<label>
+				<input type="radio" name="scroll_top_plugin_settings[scroll_top_animation]" value="fade" <?php checked( 'fade', $settings ); ?> />
+				<?php esc_html_e( 'Fade', 'scroll-top' ); ?>
+			</label><br />
 
-	$output = '<p><label>';
-		$output .= '<input type="radio" name="scroll_top_plugin_settings[scroll_top_animation]" value="fade" ' . checked( 'fade', $settings, false ) . ' />';
-		$output .= __( 'Fade', 'scroll-top' );
-	$output .= '</p></label>';
+			<label>
+				<input type="radio" name="scroll_top_plugin_settings[scroll_top_animation]" value="slide" <?php checked( 'slide', $settings ); ?> />
+				<?php esc_html_e( 'Slide', 'scroll-top' ); ?>
+			</label><br />
 
-	$output .= '<p><label>';
-		$output .= '<input type="radio" name="scroll_top_plugin_settings[scroll_top_animation]" value="slide" ' . checked( 'slide', $settings, false ) . ' />';
-		$output .= __( 'Slide', 'scroll-top' );
-	$output .= '</p></label>';
-
-	$output .= '<p><label>';
-		$output .= '<input type="radio" name="scroll_top_plugin_settings[scroll_top_animation]" value="none" ' . checked( 'none', $settings, false ) . ' />';
-		$output .= __( 'None', 'scroll-top' );
-	$output .= '</p></label>';
-
-	echo $output;
+			<label>
+				<input type="radio" name="scroll_top_plugin_settings[scroll_top_animation]" value="none" <?php checked( 'none', $settings ); ?> />
+				<?php esc_html_e( 'None', 'scroll-top' ); ?>
+			</label>
+		</p>
+	</fieldset>
+<?php
 }
 
 /**
- * Speed field fallback.
- *
- * @since  0.1
+ * Speed field
  */
 function scroll_top_speed_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_speed' );
-
-	$output = '<input name="scroll_top_plugin_settings[scroll_top_speed]" type="number" step="50" min="50" id="scroll_top_speed" value="' . $settings . '" class="small-text" />';
-	$output .= __( ' millisecond', 'scroll-top' );
-
-	echo $output;
+?>
+	<input name="scroll_top_plugin_settings[scroll_top_speed]" type="number" step="50" min="50" id="scroll_top_speed" value="<?php echo (int)$settings; ?>" class="small-text" />
+	<?php esc_html_e( ' millisecond', 'scroll-top' ); ?>
+<?php
 }
 
 /**
- * Distance field fallback.
- *
- * @since  0.1
+ * Distance field
  */
 function scroll_top_distance_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_distance' );
-
-	$output = '<input name="scroll_top_plugin_settings[scroll_top_distance]" type="number" step="100" min="100" id="scroll_top_distance" value="' . $settings . '" class="small-text" />';
-	$output .= __( ' px', 'scroll-top' );
-
-	echo $output;
+?>
+	<input name="scroll_top_plugin_settings[scroll_top_distance]" type="number" step="100" min="100" id="scroll_top_distance" value="<?php echo (int)$settings; ?>" class="small-text" />
+	<?php esc_html_e( ' px', 'scroll-top' ); ?>
+<?php
 }
 
 /**
- * Custom CSS fallback.
- *
- * @since  0.1
+ * Custom CSS
  */
 function scroll_top_css_field() {
 	$settings = scroll_top_get_plugin_settings( 'scroll_top_css' );
-
-	$output = '<textarea name="scroll_top_plugin_settings[scroll_top_css]" id="scroll_top_css" cols="50" rows="12">' . $settings . '</textarea>';
-
-	echo $output;
+?>
+	<textarea name="scroll_top_plugin_settings[scroll_top_css]" id="scroll_top_css" cols="50" rows="12"><?php echo $settings; ?></textarea>
+<?php
 }
 
 /**
  * Render the plugin settings page.
- *
- * @since  0.1
  */
 function scroll_top_plugin_settings_render_page() { ?>
 
 	<div class="wrap">
 
-		<h2><?php _e( 'Scroll Top Settings', 'scroll-top' ); ?></h2>
+		<h2><?php esc_html_e( 'Scroll Top Settings', 'scroll-top' ); ?></h2>
 
-		<div id="post-body" class="scroll-top-settings metabox-holder columns-2">
+		<div id="poststuff">
 
-			<div id="post-body-content">
-				<form method="post" action="options.php">
-					<?php settings_fields( 'scroll_top_settings' ); ?>
-					<?php do_settings_sections( 'scroll_top_settings_page' ); ?>
-					<?php submit_button( esc_attr__( 'Update Settings', 'scroll-top' ), 'primary large' ); ?>
-				</form>
-			</div><!-- .post-body-content -->
+			<div id="post-body" class="scroll-top-settings metabox-holder columns-2">
 
-			<div id="postbox-container-1" class="postbox-container">
-				<div>
+				<div id="post-body-content">
+					<form method="post" action="options.php">
+						<?php settings_fields( 'scroll_top_settings' ); ?>
+						<?php do_settings_sections( 'scroll_top_settings_page' ); ?>
+						<?php submit_button( esc_html__( 'Save Settings', 'scroll-top' ), 'primary large' ); ?>
+					</form>
+				</div><!-- .post-body-content -->
 
-					<div class="postbox">
-						<h3 class="hndle"><span><?php _e( 'Plugin Info', 'scroll-top' ); ?></span></h3>
-						<div class="inside">
-							<ul class="ul-square">
-								<li><a href="https://www.theme-junkie.com/plugins/scroll-top/" target="_blank"><?php _e( 'Author\'s Website', 'scroll-top' ); ?></a></li>
-								<li><a href="http://wordpress.org/support/plugin/scroll-top" target="_blank"><?php _e( 'Support', 'scroll-top' ); ?></a></li>
-								<li><a href="http://wordpress.org/support/view/plugin-reviews/scroll-top" target="_blank"><?php _e( 'Rate/Review plugin', 'scroll-top' ); ?></a></li>
-							</ul>
+				<div id="postbox-container-1" class="postbox-container">
+					<div>
+
+						<div class="postbox">
+							<h3 class="hndle"><span><?php esc_html_e( 'Plugin Info', 'scroll-top' ); ?></span></h3>
+							<div class="inside">
+								<ul class="ul-square">
+									<li><a href="https://6hourcreative.com/" target="_blank"><?php esc_html_e( 'Author\'s Website', 'scroll-top' ); ?></a></li>
+									<li><a href="http://wordpress.org/support/plugin/scroll-top" target="_blank"><?php esc_html_e( 'Support', 'scroll-top' ); ?></a></li>
+									<li><a href="http://wordpress.org/support/view/plugin-reviews/scroll-top" target="_blank"><?php esc_html_e( 'Rate/Review plugin', 'scroll-top' ); ?></a></li>
+								</ul>
+							</div>
 						</div>
+
 					</div>
+				</div><!-- .postbox-container -->
 
-					<div class="postbox">
-						<h3 class="hndle"><span><?php _e( 'Premium Magazine Theme', 'scroll-top' ); ?></span></h3>
-						<div class="inside">
-							<p>The Daily theme is designed to work for personal bloggers, online magazines, newspapers or community blogs.</p>
-							<a href="http://www.theme-junkie.com/amember/go.php?r=18014&i=l16"><img src="<?php echo ST_ASSETS . '/img/daily.jpg'; ?>"></a>
-						</div>
-					</div>
+			</div><!-- .scroll-top-settings -->
 
-				</div>
-			</div><!-- .postbox-container -->
-
-		</div><!-- .scroll-top-settings -->
+			<br class="clear">
+		</div>
 
 	</div>
 
@@ -421,19 +416,16 @@ function scroll_top_plugin_settings_render_page() { ?>
 
 /**
  * Validates/sanitizes the plugins settings after they've been submitted.
- *
- * @since  0.1
- * @return array
  */
 function scroll_top_plugin_settings_validate( $settings ) {
 
-	/* Set up an array of valid settings. */
+	// Set up an array of valid settings.
 	$valid_type     = array( 'text', 'icon' );
 	$valid_position = array( 'left', 'right' );
-	$valid_radius   = array( 'square', 'rounded' );
+	$valid_radius   = array( 'square', 'rounded', 'circle' );
 	$valid_animate  = array( 'fade', 'slide', 'none' );
 
-	/* If the option is NOT in the array, set it to a default option. Do nothing if the option is valid. */
+	// If the option is NOT in the array, set it to a default option. Do nothing if the option is valid.
 	if ( !in_array( $settings['scroll_top_type'], $valid_type ) )
 		$settings['scroll_top_type'] = 'icon';
 
@@ -448,25 +440,11 @@ function scroll_top_plugin_settings_validate( $settings ) {
 
 	$settings['scroll_top_enable']   = ( isset( $settings['scroll_top_enable'] ) && 1 == $settings['scroll_top_enable'] ? 1 : 0 );
 	$settings['scroll_top_text']     = sanitize_text_field( $settings['scroll_top_text'] );
-	$settings['scroll_top_color']    = sanitize_text_field( $settings['scroll_top_color'] );
-	$settings['scroll_top_bg_color'] = sanitize_text_field( $settings['scroll_top_bg_color'] );
+	$settings['scroll_top_color']    = sanitize_hex_color( $settings['scroll_top_color'] );
+	$settings['scroll_top_bg_color'] = sanitize_hex_color( $settings['scroll_top_bg_color'] );
 	$settings['scroll_top_speed']    = absint( $settings['scroll_top_speed'] );
 	$settings['scroll_top_distance'] = absint( $settings['scroll_top_distance'] );
 	$settings['scroll_top_css ']     = wp_filter_nohtml_kses( $settings['scroll_top_css '] );
 
 	return $settings;
-}
-
-/**
- * Enqueue custom styles & scripts for plugin usage.
- *
- * @since  0.1
- */
-function scroll_top_styles_scripts() {
-
-	// Load plugin admin style.
-	wp_enqueue_style( 'scroll-top-css', trailingslashit( ST_ASSETS ) . 'css/scroll-top-admin.css', array( 'wp-color-picker' ), null );
-
-	// Load plugin admin script.
-	wp_enqueue_script( 'scroll-top-scripts', trailingslashit( ST_ASSETS ) . 'js/scroll-top-admin.js', array( 'jquery', 'wp-color-picker' ), null, true );
 }

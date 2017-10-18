@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name:  Scroll Top
- * Plugin URI:   https://www.theme-junkie.com/plugins/scroll-top/
+ * Plugin URI:   https://6hourcreative.com/plugins/scroll-top/
  * Description:  Adds a flexible Back to Top button to any post/page of your WordPress website.
- * Version:      0.9
- * Author:       Theme Junkie
- * Author URI:   http://www.theme-junkie.com/
- * Author Email: support@theme-junkie.com
+ * Version:      1.0.1
+ * Author:       6 Hour Creative
+ * Author URI:   https://6hourcreative.com/
+ * Author Email: hi@6hourcreative.com
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
  * General Public License as published by the Free Software Foundation; either version 2 of the License,
@@ -26,8 +26,6 @@ class Scroll_Top {
 
 	/**
 	 * PHP5 constructor method.
-	 *
-	 * @since  0.1
 	 */
 	public function __construct() {
 
@@ -47,8 +45,6 @@ class Scroll_Top {
 
 	/**
 	 * Defines constants used by the plugin.
-	 *
-	 * @since  0.1
 	 */
 	public function constants() {
 
@@ -71,8 +67,6 @@ class Scroll_Top {
 
 	/**
 	 * Loads the translation files.
-	 *
-	 * @since  0.1
 	 */
 	public function i18n() {
 		load_plugin_textdomain( 'scroll-top', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
@@ -80,8 +74,6 @@ class Scroll_Top {
 
 	/**
 	 * Loads the initial files needed by the plugin.
-	 *
-	 * @since  0.1
 	 */
 	public function includes() {
 		require_once( ST_INCLUDES . 'functions.php' );
@@ -89,8 +81,6 @@ class Scroll_Top {
 
 	/**
 	 * Loads the admin functions and files.
-	 *
-	 * @since  0.1
 	 */
 	public function admin() {
 		if ( is_admin() ) {
