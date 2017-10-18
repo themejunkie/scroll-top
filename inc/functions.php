@@ -19,7 +19,7 @@ function scroll_top_get_default_settings() {
 		'scroll_top_animation'  => 'fade',
 		'scroll_top_speed'      => 300,
 		'scroll_top_distance'   => 300,
-		'scroll_top_css'        => "#scrollUp {\npadding: 0px 10px;\n}"
+		'scroll_top_css'        => "#scrollUp {\npadding: 5px 10px;\n}"
 	);
 
 	// Allow dev to filter the default settings.
@@ -139,9 +139,8 @@ function scroll_top_custom_css() {
 
 		echo '<!-- Scroll Top -->' . "\n";
 		echo '<style id="scrolltop-custom-style">
-		#scrollUp{border-radius:' . $scroll_radius . ';-webkit-border-radius:' . $scroll_radius . ';-moz-border-radius:' . $scroll_radius . ';font-size:' . $scroll_fontsize . ';opacity:0.8;filter:alpha(opacity=80);bottom:20px;' . $scroll_position . 'color:' . $color . ';background:' . $bgcolor . '; visibility: hidden;}
+		#scrollUp{border-radius:' . $scroll_radius . ';-webkit-border-radius:' . $scroll_radius . ';-moz-border-radius:' . $scroll_radius . ';font-size:' . $scroll_fontsize . ';opacity:0.8;filter:alpha(opacity=80);bottom:20px;' . $scroll_position . 'color:' . $color . ';background:' . $bgcolor . ';}
 		#scrollUp:hover{opacity:1;filter:alpha(opacity=100);}
-		@media (min-width: 600px) { #scrollUp { visibility: visible; } }
 		' . $css . '
 		</style>' . "\n";
 		echo '<!-- End Scroll Top - https://wordpress.org/plugins/scroll-top/ -->' . "\n";

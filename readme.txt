@@ -1,9 +1,9 @@
-=== Smart Scroll Top ===
-Contributors: satrya
+=== Scroll Top ===
+Contributors: themejunkie, satrya
 Tags: back to top, button, to top, jquery, scroll to top, scroll top, customization
 Requires at least: 4.0
-Tested up to: 4.6.1
-Stable tag: 1.0.1
+Tested up to: 4.8.2
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Automaticlly adds a flexible Back to Top button to your WordPress website. You c
 
 This plugin will enable a custom and flexible Back To Top to your WordPress website. It comes with unlimited color choices, icon font option to support retina device, hide on screen width smaller than 600 pixels.
 
-Please take a look the plugin page for more details: [https://satrya.me/portfolio/smart-scroll-top/](https://satrya.me/portfolio/smart-scroll-top/)
+Please take a look the plugin page for more details: [https://www.theme-junkie.com/plugins/scroll-top/](https://www.theme-junkie.com/plugins/scroll-top/)
 
 = Features Include: =
 
@@ -25,11 +25,10 @@ Please take a look the plugin page for more details: [https://satrya.me/portfoli
 * Change animation you like.
 * Automatically hide on screen width smaller than 600 pixels.
 * Custom CSS area
-* Mobile device friendly plugin settings
 
 = Contribute =
 
-If you want to contribute, we hosted the plugin on github: [https://github.com/satrya/scroll-top](https://github.com/satrya/scroll-top)
+If you want to contribute, we hosted the plugin on github: [https://github.com/themejunkie/scroll-top](https://github.com/themejunkie/scroll-top)
 
 == Installation ==
 
@@ -55,6 +54,10 @@ If you want to contribute, we hosted the plugin on github: [https://github.com/s
 1. The plugin settings.
 
 == Changelog ==
+
+= 1.0.2 - Oct 18, 2017 =
+* Maintenance update
+* It is now displayed on mobile device!
 
 = 1.0.1 - Sept 10, 2016 =
 * Secure translation text

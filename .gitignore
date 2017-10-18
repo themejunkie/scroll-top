@@ -1,2 +1,4 @@
+/.sass-cache
 /node_modules
-.csscomb.json
+/build
+/bower_components

@@ -394,7 +394,7 @@ function scroll_top_plugin_settings_render_page() { ?>
 							<h3 class="hndle"><span><?php esc_html_e( 'Plugin Info', 'scroll-top' ); ?></span></h3>
 							<div class="inside">
 								<ul class="ul-square">
-									<li><a href="https://6hourcreative.com/" target="_blank"><?php esc_html_e( 'Author\'s Website', 'scroll-top' ); ?></a></li>
+									<li><a href="https://www.theme-junkie.com/" target="_blank"><?php esc_html_e( 'Author\'s Website', 'scroll-top' ); ?></a></li>
 									<li><a href="http://wordpress.org/support/plugin/scroll-top" target="_blank"><?php esc_html_e( 'Support', 'scroll-top' ); ?></a></li>
 									<li><a href="http://wordpress.org/support/view/plugin-reviews/scroll-top" target="_blank"><?php esc_html_e( 'Rate/Review plugin', 'scroll-top' ); ?></a></li>
 								</ul>

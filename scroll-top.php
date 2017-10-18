@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name:  Scroll Top
- * Plugin URI:   https://6hourcreative.com/plugins/scroll-top/
+ * Plugin URI:   https://www.theme-junkie.com/plugins/scroll-top/
  * Description:  Adds a flexible Back to Top button to any post/page of your WordPress website.
- * Version:      1.0.1
- * Author:       6 Hour Creative
- * Author URI:   https://6hourcreative.com/
- * Author Email: hi@6hourcreative.com
+ * Version:      1.0.2
+ * Author:       Theme Junkie
+ * Author URI:   https://www.theme-junkie.com/
+ * Author Email: support@theme-junkie.com
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
  * General Public License as published by the Free Software Foundation; either version 2 of the License,
